@@ -20,7 +20,7 @@ specdata <- read_csv(file.path(datapath, 'Spectra/B2/','B2_ASD_Leaf_Spectra_filt
 
 
 traitdata <- read_csv(file.path(datapath, 'SLA_LMA_Data/B2/','B2_Trait_Data_filter_v1.csv')) %>%
-  mutate(leaf_mass_per_area = 1/SLA_m2_kg,  # TRAIT CONVERSION!
+  mutate(leaf_mass_per_area = (1/SLA_m2_kg)*1000,  # TRAIT CONVERSION!
          leaf_water_thickness = Water_Perc * leaf_mass_per_area,
          VegetationType = recode(Vegetation_Type,
                                  `0` = 'B2NTF',
