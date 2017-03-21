@@ -3,6 +3,11 @@ title: Spectra and trait data processing
 author: Alexey Shiklomanov
 ---
 
+# Requirements
+SQLite3
+ - Install on a mac:    sudo port install sqlite3 (using MacPorts)
+ 			brew install sqlite3 (brew)	
+
 # Sample metadata
     - `samplename` -- Sample identifier; usually project-specific
     - `datacode` -- Formerly `RawSpecies`; data-specific species ID, to be matched via `species_dict`
