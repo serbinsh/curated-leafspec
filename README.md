@@ -5,8 +5,11 @@ author: Alexey Shiklomanov
 
 # Requirements
 SQLite3
- - Install on a mac:    sudo port install sqlite3 (using MacPorts)
- 			brew install sqlite3 (brew)	
+ - Install on a mac:
+	sudo port install sqlite3 (using MacPorts)
+ 	brew install sqlite3 (brew)	
+
+devtools::install_github("ashiklom/dbhelpers")
 
 # Sample metadata
     - `samplename` -- Sample identifier; usually project-specific
