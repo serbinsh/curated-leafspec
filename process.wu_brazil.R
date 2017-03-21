@@ -1,7 +1,7 @@
 library(specprocess)
 source('common.R')
 
-datapath <- '~/Dropbox/NASA_TE_PEcAn-RTM_Project/Data/Jin_Wu_Brazil_Data'
+datapath <- '~/Data/Dropbox/MANUSCRIPTS/BNL_TEST/Serbin_Global_Spec-LMA_Analysis/Data'
 
 projects <- tibble(projectcode = 'wu_brazil',
                    projectdescription = 'Wu et al. 2016 New Phytologist Brazil canopy traits study',
@@ -11,7 +11,7 @@ projects <- tibble(projectcode = 'wu_brazil',
     db_merge_into(db = specdb, table = 'projects', values = .,
                   by = 'projectcode', id_colname = 'projectid')
 
-specdata <- read_csv(file.path(datapath, 'Brazil_ASD_Leaf_Spectra_filter_v1.csv')) %>%
+specdata <- read_csv(file.path(datapath, 'Spectra/Brazil/','Brazil_ASD_Leaf_Spectra_filter_v1.csv')) %>%
     mutate(wavelength = as.numeric(gsub(' nm', '', Wavelength))) %>%
     select(-Wavelength) %>%
     gather(key = Leaf_Number, value = spectravalue, -wavelength) %>%
@@ -19,8 +19,8 @@ specdata <- read_csv(file.path(datapath, 'Brazil_ASD_Leaf_Spectra_filter_v1.csv'
     select(-Leaf_Number)
 
 
-traitdata <- read_csv(file.path(datapath, 'Brazil_Trait_Data_filter_v1.csv')) %>%
-    mutate(leaf_mass_per_area = 1/SLA_m2_kg,
+traitdata <- read_csv(file.path(datapath, 'SLA_LMA_Data/Brazil/','Brazil_Trait_Data_filter_v1.csv')) %>%
+    mutate(leaf_mass_per_area = 1/SLA_m2_kg,  # TRAIT CONVERSION!
            leaf_water_thickness = Water_Perc * leaf_mass_per_area,
            CanopyPosition = recode(Light_Environment,
                                    `3` = 'T',

@@ -5,6 +5,7 @@ CREATE TABLE projects(
     projectid INTEGER PRIMARY KEY,
     projectcode TEXT UNIQUE,
     projectdescription TEXT,
+    affiliation TEXT,
     pointofcontact TEXT,
     email TEXT,
     doi TEXT,

@@ -1,10 +1,1 @@
-projectcode,projectdescription,affiliation,pointofcontact,email,projectcomment
-nasa_fft,NASA Forest Functional Types (FFT),,,,
-lopex,Leaf Optical Properties Experiment,,,,
-angers,Angers France spectra from INRA,,,,
-yang_pheno,Seasonal leaf spectra and traits data by Xi Yang,,,,
-ngee_arctic,Next Generation Ecosystem Experiments (NGEE) -- Arctic,,,,
-ngee_tropics,Next Generation Ecosystem Experiments (NGEE) -- Tropics,,,,
-accp,Accelerated Canopy Chemistry Program (ACCP),,,,
-divittorio_conifer,Conifer spectra from Alan Di Vittorio ozone study,,,,
-
+projectcode,projectdescription,affiliation,pointofcontact,email,projectcommentnasa_fft,NASA Forest Functional Types (FFT) project,UW-Madison / BNL,Shawn P. Serbin,sserbin@bnl.gov,https://cce.nasa.gov/cgi-bin/cce/cce_profile.pl?project_group_id=2463nasa_hyspiri,NASA HyspIRI campaign leaf optical data,UW-Madison / BNL,Shawn P. Serbin,sserbin@bnl.gov,"Townsend, Serbin, Kruger, Desai NASA HyspIRI campaign project.  https://cce.nasa.gov/cgi-bin/cce/cce_profile.pl?project_group_id=3037"ngee_arctic,Next Generation Ecosystem Experiments (NGEE) -- Arctic,BNL,Shawn P. Serbin,sserbin@bnl.gov,http://ngee-arctic.ornl.gov/ngee_tropics,Next Generation Ecosystem Experiments (NGEE) -- Tropics,BNL,Shawn P. Serbin,sserbin@bnl.gov,http://ngee-tropics.lbl.gov/wu_b2,Leaf spectra from tropical plants grown in Biosphere2,U of Arizona / BNL,Jin Wu,jinwu@bnl.gov; geo.woo.jin@gmail.com,wu_brazil,"Tropical tree spectra from Wu et al., 2017. 10.1111/nph.14051",U of Arizona / BNL,Jin Wu,jinwu@bnl.gov; geo.woo.jin@gmail.com,

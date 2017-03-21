@@ -17,3 +17,6 @@ dict <- db_merge_into(db = specdb, table = 'species_dict',
                       values = dict, by = 'speciescode',
                       id_colname = 'speciesdictid')
 print(dict)
+
+spp.dic <- as.data.frame(dict)
+head(spp.dic)
