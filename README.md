@@ -11,6 +11,8 @@ SQLite3
 
 devtools::install_github("ashiklom/dbhelpers")
 
+RSQLite
+
 # Sample metadata
     - `samplename` -- Sample identifier; usually project-specific
     - `datacode` -- Formerly `RawSpecies`; data-specific species ID, to be matched via `species_dict`

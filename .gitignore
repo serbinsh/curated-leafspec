@@ -26,4 +26,8 @@ all_ids.txt
 finished.txt
 failed.txt
 
+# Mac junk
+*.DS_Store
+data/.DS_Store
+
 spectra_report.html
