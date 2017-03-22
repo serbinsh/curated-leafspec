@@ -20,8 +20,9 @@ specdata <- read_csv(file.path(datapath, 'Spectra/Brazil/','Brazil_ASD_Leaf_Spec
 
 
 traitdata <- read_csv(file.path(datapath, 'SLA_LMA_Data/Brazil/','Brazil_Trait_Data_filter_v1.csv')) %>%
-    mutate(leaf_mass_per_area = 1/SLA_m2_kg,  # TRAIT CONVERSION!
-           leaf_water_thickness = Water_Perc * leaf_mass_per_area,
+    #mutate(leaf_mass_per_area = 1/SLA_m2_kg,  # TRAIT CONVERSION!
+    mutate(leaf_mass_per_area_gDW_m2 = (1/SLA_m2_kg)*1000,
+           leaf_water_thickness = Water_Perc * 1/SLA_m2_kg,
            CanopyPosition = recode(Light_Environment,
                                    `3` = 'T',
                                    `2` = 'M',
@@ -35,7 +36,7 @@ traitdata <- read_csv(file.path(datapath, 'SLA_LMA_Data/Brazil/','Brazil_Trait_D
                             `3` = 'old'),
            sunshade = if_else(CanopyPosition == 'T', 'sun', 'shade'),
            samplecode = paste(projects$projectcode, Leaf_Number, NA, sep = '|')) %>%
-    select(samplecode, leaf_mass_per_area, leaf_water_thickness,
+    select(samplecode, leaf_mass_per_area_gDW_m2, leaf_water_thickness,
            CanopyPosition, CompleteLeaf, LeafAge, sunshade)
 
 siteplot <- tribble(
